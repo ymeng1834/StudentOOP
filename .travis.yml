@@ -10,11 +10,7 @@ script:
 notifications:
   email:
     recipients:
+      - ym1834@nyu.edu
       - mz2325@nyu.edu
     on_success: always
-    on_failure: never
 
-    recipients:
-      - ym1834@nyu.edu
-    on_success: always
-    on_failure: always  
