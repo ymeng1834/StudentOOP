@@ -6,11 +6,10 @@ compiler:
 script:
     - make tests
 
-
 notifications:
-	email:
+    email:
         recipients:
+            - mz2325@nyu.edu
             - ym1834@nyu.edu
-			- mz2325@nyu.edu
         on_success: always
         on_failure: never
