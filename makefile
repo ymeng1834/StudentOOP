@@ -1,3 +1,4 @@
+
 CXXFLAGS=-g -std=c++14 -Wall -pedantic
 CC=$(CXX)
 
@@ -17,10 +18,11 @@ test_pointers: $(TEST_DIR)/test_pointers
 $(TEST_DIR)/test_pointers: $(STUDENT_DIR)/pointers.cpp $(TEST_DIR)/test_pointers.cpp
 
 # basics not ready to be tested yet!
-tests: test_hello test_pointers # basics
-    tests/test_hello
-    # tests/test_basics
+tests: #test_hello test_basics
+	#tests/test_hello
+	tests/test_basics
 
 prod: tests
-        git commit -a -m "testing new code"
-        git push origin master
+	git commit -a -m "testing new code"
+	git push origin master
+
