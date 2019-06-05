@@ -29,6 +29,8 @@ int main() {
     students.push_back(mary);
     students.push_back(gordon);
     printTAs(students);
+    assert(mary->ta == gordon);
+    assert(gordon->ta == nullptr);
     
     // now let's make, print, change, and delete some "things":
     Thing** things = create_array_of_things(NUM_THINGS);
@@ -37,9 +39,8 @@ int main() {
     print_all_things(things, NUM_THINGS);
     
     double_all_things(things, NUM_THINGS);
-    for (int i = 0; i < NUM_THINGS; i++) {
+    for (int i = 0; i < NUM_THINGS; i++)
         assert(things[i]->val == (i * 2));
-    }
     
     print_all_things(things, NUM_THINGS);
     
