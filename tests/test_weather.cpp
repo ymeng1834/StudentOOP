@@ -6,6 +6,7 @@
 
 using namespace std;
 
+/*
 string get_file_name() {
 	string filename;
 	cout << "Enter file name: ";
@@ -26,12 +27,36 @@ void get_wreadings(Weather& w) {
 	}
 	rfile.close();
 }
+*/
+
+void make_images1(Image& img1) {
+	for (int i = 0; i < 100; i++) {
+		Image img2 = Image(10, 10, "foo.txt");
+		img2 = img1;
+	}
+}
+void make_images2(Image& img1) {
+	for (int i = 0; i < 100; i++) {
+		Image img2 = img1;
+	}
+}
 
 
 int main() {
+	string fnm = "happy.gif!";
+	Image img = Image(100, 100, fnm);
+	for (int i = 1; i < 1000; i++) {
+		make_images1(img);
+		make_images2(img);
+	}
+	exit(0);
+	
+	
+	/*
 	Weather irkutsk = Weather("Irkutsk", GPS(46.3, 67.2));
 	
 	get_wreadings(irkutsk);
 	
 	cout << irkutsk << endl;
+	*/
 }
