@@ -28,9 +28,15 @@ test_vector: $(TEST_DIR)/test_vector
 
 $(TEST_DIR)/test_vector: $(STUDENT_DIR)/vector.cpp $(TEST_DIR)/test_vector.cpp
 
+test_llist: $(TEST_DIR)/test_llist
 
-tests: test_vector #test_weather test_complex test_hello test_basics test_pointers
-	tests/test_vector
+$(TEST_DIR)/test_llist: $(STUDENT_DIR)/llist.cpp $(TEST_DIR)/test_llist.cpp
+
+
+
+
+tests: test_llist #test_vector test_weather test_complex test_hello test_basics test_pointers
+	tests/test_llist
 
 
 prod: tests
